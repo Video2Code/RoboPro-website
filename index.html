@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Robotic Programmer: Video Instructed Policy Code Generation for Robotic Manipulation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/RoboPro.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+
+  <style>
+    .hero-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* 水平居中 */
+      justify-content: center; /* 垂直居中 */
+    }
+
+    .video-wrapper {
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center;
+      width: 120%; /* 根据需求设置宽度 */
+      max-width: 1000px; /* 设置视频最大宽度，避免过大 */
+    }
+
+    video {
+      width: 100%; /* 视频宽度设置为 100% 以适应容器 */
+      height: auto; /* 自动调整高度 */
+    }
+
+    h3.subtitle {
+      margin-top: 10px; /* 调整标题与视频的距离 */
+    }
+
+.title.is-3 {
+  font-size: 2em; /* 字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  color: #2a5d84; /* 标题颜色 */
+  text-align: center; /* 标题居中 */
+  position: relative; /* 相对定位以支持伪元素 */
+  margin-bottom: 20px; /* 标题下方的间距 */
+}
+
+.title.is-3::before {
+  content: ''; /* 添加伪元素 */
+  position: absolute; /* 伪元素绝对定位 */
+  bottom: -5px; /* 调整下划线与标题的垂直间距 */
+  left: 50%; /* 将伪元素的左侧定位到标题中心 */
+  transform: translateX(-50%); /* 使下划线居中 */
+  width: 150px; /* 下划线的宽度 */
+  height: 3px; /* 下划线的高度 */
+  background-color: #2a5d84; /* 下划线的颜色 */
+}
+
+.title.is-3:hover {
+  color: #e1d013; /* 悬停时改变颜色 */
+  cursor: pointer; /* 鼠标指针样式 */
+}
+  </style>
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title">Robotic Programmer: Video Instructed Policy Code Generation for Robotic Manipulation</h1> -->
+            <h1 class="title is-1 publication-title">
+              <img src="static/images/RoboPro.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista" style="vertical-align: middle">RoboPro</span>
+            </h1>
+            <h2 class="subtitle is-3 publication-subtitle">
+              Robotic Programmer: Video Instructed Policy Code Generation for Robotic Manipulation
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Senwei Xie,</span>
+              <span class="author-block">
+                Hongyu Wang,</span>
+              <span class="author-block">
+                Zhanqi Xiao,</span>               
+              <span class="author-block">
+                <a href="https://vipl.ict.ac.cn/people/_rpwang/">Ruiping Wang</a>,</span>
+              <span class="author-block">
+                <a href="http://vipl.ict.ac.cn/people/_xlchen/">Xilin Chen</a></span>     
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Institute of Computing Technology, Chinese Academy of Sciences,</span><br>
+            </div>
+          </div>
+        </div>
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+              <!-- @PAN TODO: change links -->
+              <a href=""
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href=""
+                 class="external-link button is-normal is-rounded is-dark">
+              <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
+                 class="external-link button is-normal is-rounded is-dark"> -->
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+            <!-- Video Link. -->
+            <!-- <span class="link-block">
+              <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span> -->
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a href=""
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+          </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="video-wrapper">
+        <img src="static/videos/supplementary_video_2.gif" alt="GIF animation" style="height: 100%;">
+      </div>
+      <h3 class="subtitle has-text-centered">
+        We present <b>Robo</b>tic <b>Programmer</b> (<img src="static/images/RoboPro.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+        <span class="mathvista">RoboPro</span>), a video-instructed robotic foundation model with the capability of perceiving visual information and following free-form instructions to perform robotic manipulation with policy code in a zero-shot manner. 
+      </h3>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<!-- <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Zero-shot generalization</b> across various robots, tasks and environments remains a significant challenge in <b>robotic manipulation</b>. <b>Policy code</b> generation methods use executable code to connect <b>high-level task descriptions and low-level action sequences</b>, leveraging the generalization capabilities of Large Language Models and atomic skill libraries. In this work, we propose <b>Robotic Programmer</b> (<img src="static/images/RoboPro.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">RoboPro</span>), a <b>robotic foundation model</b>, enabling the capability of <b>perceiving visual information and following free-form instructions</b> to perform robotic manipulation with policy code in a zero-shot manner. To address low efficiency and high cost in collecting runtime code data for robotic tasks, we devise <b>Video2Code</b> to synthesize executable code from <b>extensive videos in-the-wild</b> with off-the-shelf <b>vision-language model</b> and <b>code-domain large language model</b>. Extensive experiments show that <img src="static/images/RoboPro.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">RoboPro</span> achieves the state-of-the-art zero-shot performance on robotic manipulation in both simulators and real-world environments. Specifically, the zero-shot success rate of <img src="static/images/RoboPro.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">RoboPro</span> on RLBench surpasses the state-of-the-art model <b>GPT-4o</b> by <b>11.6%</b>, which is even comparable to a strong supervised training baseline. Furthermore, <img src="static/images/RoboPro.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">RoboPro</span> is <b>robust to different robotic configurations</b>, and demonstrates <b>broad visual understanding in general VQA tasks</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+    <div class="container" style="margin-bottom: 0vh;">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p style="line-height: 170%;">
+              Zero-shot generalization across various robots, tasks and environments remains a significant challenge in robotic manipulation. Policy code generation methods use executable code to connect high-level task descriptions and low-level action sequences, utilizing the generalization capabilities of Large Language Models (LLMs) and atomic skill libraries. In this work, we propose <b>Robo</b>tic <b>Pro</b>grammer, a robotic foundation model, enabling the capability of perceiving visual information and following free-form instructions to perform robotic manipulation with policy code in a zero-shot manner. To address low efficiency and high cost in collecting runtime code data for robotic tasks, we propose <b>Video2Code</b> to synthesize executable code from extensive videos in-the-wild with off-the-shelf vision-language model and code-domain large language model. Extensive experiments show that RoboPro achieves the state-of-the-art zero-shot performance on robotic manipulation in both simulators and real-world environments. Specifically, the zero-shot success rate of RoboPro on RLBench surpasses the state-of-the-art model GPT-4o by 11.6%, which is even comparable to a strong supervised training baseline. Furthermore, RoboPro is robust to different robotic configurations, and demonstrates the emergent ability for unseen skills on complex tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="video-wrapper">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <source src="static/videos/sequence.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p style="line-height: 170%;">
+            RoboPro is a policy code generation model for robotics, enabling the capacity to follow free-form language instruction and grounding with visual observation in a zero-shot manner. 
+            The design of RoboPro introduces a unified architecture that seamlessly integrates visual perception, instruction following, and code generation by leveraging end-to-end vision-language models (VLMs). 
+            The unified pipeline eliminates the potential loss of critical information during intermediate steps and enhances computational efficiency during inference.
+            However, training such VLMs to perceive environments, follow instructions and generate executable code will
+            inevitably require a vast amount of diverse and well-aligned
+            robot-centric multimodal runtime code data, which poses a
+            significant challenge.
+          </p> 
+          
+          <div class="content has-text-centered" style="margin-top: 40px; margin-bottom: 40px;">
+            <h2 class="title is-3">Video2Code</h2>
+            <img src="static/images/Video2Code.png" alt="Video2Code" style="max-width: 100%;"/>
+          </div>
+          <p style="line-height: 170%;"></p>
+          Videos are widely available raw data sources for runtime code data synthesis and naturally
+          provide sequencial knowledge for task execution. To address low efficiency and high cost in collecting runtime code data, we devise Video2Code, a low-cost
+          and automatic data curation pipeline to synthesize high quality runtime code data from videos in an efficient way.
+          To combine the visual reasoning
+          ability of VLM and coding proficiency of code-domain LLM,
+          Video2Code adopts a two-stage strategy. We finally
+          collect 115k runtime code data with task descriptions and
+          environmental observations using Video2Code for supervised
+          fine-tuning.
+          </p>
+          
+          <div class="content has-text-centered" style="margin-top: 40px; margin-bottom: 40px;">
+            <h2 class="title is-3">Architecture</h2>
+            <img src="static/images/RoboPro_struct.png" alt="RoboPro" style="max-width: 100%;"/>
+          </div>
+          <p style="line-height: 170%;">
+          <img src="static/images/RoboPro.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+          <span class="mathvista" style="vertical-align: middle"><b>RoboPro</b></span> adopts the LLaVA architecture, with a vision encoder and a pre-trained LLM connected with a  two-layer MLP adaptor. We directly concatenate the
+            visual and text tokens, then feed them into the LLM. The LLM are trained to generate the runtime code based on the visual inputs and task description. 
+            RoboPro adopts SigLIP-L as the vision encoder, which brings better performance on general visual reasoning tasks. For the base LLM, we select a code-domain LLM, CodeQwen1.5, with state-of-the-art performance among open-source code models.
+            <p>The training procedure of RoboPro consists of three stages: visual alignment, pre-training, and supervised fine-tuning (SFT). 
+            For supervised fine-tuning, the 115k runtime code data
+            generated by Video2Code are used. To avoid overfitting and enhance visual reasoning ability, a
+            general vision language fine-tuning dataset is also involved during the SFT process. Thus, RoboPro is trained to follow free-form language instructions and
+            perceive visual information to generate executable policy code for robotic manipulation.</p>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista">
+      <img src="static/images/RoboPro.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+      <span class="mathvista" style="vertical-align: middle">Experiment Results</span>
+    </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered m-6"></div>
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Results on Simulators and Real-World Environments</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/results/RLBench_Result.png" alt="grade-lv" width="60%"/>
+              <p>
+                Success rate (%) on <b>RLBench Multi-Task setting</b>. Methods greyed on need supervised training on the simulation platform. <br> 
+                <b>PerAct</b> is trained on <b>100</b> episodes, and <b>LLARVA</b> is trained on <b>800</b> episodes per task in RLBench. We evaluate <b>CaP</b>, <b>GPT-4o</b>, <br>
+                and <img src="static/images/RoboPro.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista" style="vertical-align: middle">RoboPro</span> with the same prompt and API implementation for a fair comparison.
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/results/LIBERO_Result.png" alt="grade-lv" width="60%"/>
+              <p>
+                Success rate (%) on 8 tasks in <b>LIBERO</b>. The result of <b>PerAct</b> is a transfer result from RLBench to LIBERO. Code generation <br> 
+                methods keep <b>zero-shot settings</b>.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/results/Unseen.png" alt="grade-lv" width="60%"/>
+              <p>The zero-shot success rate (%) of <img src="static/images/RoboPro.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista" style="vertical-align: middle">RoboPro</span> on <b>unseen skills</b> and the baselines. We provide a
+                user specified API for each task, <br>
+                which is unseen in training procedure of <img src="static/images/RoboPro.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista" style="vertical-align: middle">RoboPro</span>.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/results/Real_World.png" alt="contexts" width="40%"/>
+              <p>The zero-shot success rate of <img src="static/images/RoboPro.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista" style="vertical-align: middle">RoboPro</span> across 8 real-world manipulation tasks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
